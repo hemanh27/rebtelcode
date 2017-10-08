@@ -26,11 +26,39 @@
     </div>
 </div>
 {{#each data}}
-    <div class="container"><p>Country: {{this.name}}</p>
-        <p>Flag: <img src="{{this.flag}}" alt="" width="50px" height="50px"></p>
-        <p>Native Name: {{this.nativeName}}</p>
-        <p>Official Currency: {{this.currencies.code}}</p>
-        <p>Borders are: {{this.borders}}</p>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 country-main">
+                <div class="country-post">
+                    <h1 class="country-title">{{this.name}}</h1>
+                    <p class="lead country-description">Native Name: {{this.nativeName}}</p>
+                </div>
+            </div>
 
+            <div class="col-sm-3 offset-sm-1 country-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+                    <img src="{{this.flag}}" alt="Country Flag" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center">Demographic Information:</h3>
+                <p>Capital: {{this.capital}}</p>
+                <p>Population: {{this.population}}</p>
+                <p>Area: {{this.area}} m<sup>2</sup></p>
+                <p>Dialing Code: {{this.callingCodes}}</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center">Borders:</h3>
+                {{#each this.borders}}
+                    <a href="https://restcountries.eu/rest/v2/alpha/{{this}}"> {{this}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
 {{/each}}

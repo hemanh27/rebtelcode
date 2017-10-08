@@ -32,3 +32,80 @@
 button{
     cursor: pointer;
 }
+/*
+ * Globals
+ */
+
+@media (min-width: 48em) {
+    html {
+        font-size: 18px;
+    }
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+.container {
+    max-width: 60rem;
+}
+
+/*
+ * Blog name and description
+ */
+
+.country-header {
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+    border-bottom: .05rem solid #eee;
+}
+.country-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.country-description {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+@media (min-width: 40em) {
+    .country-title {
+        font-size: 3.5rem;
+    }
+}
+
+
+/*
+ * Blog posts
+ */
+
+.country-post {
+    margin-bottom: 4rem;
+}
+.country-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+.country-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+}
+
