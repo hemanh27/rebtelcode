@@ -1,0 +1,36 @@
+<div class="jumbotron text-center">
+    <h1 class="display-3">
+        {{title}}
+    </h1>
+    <p class="lead">Get to know some interesting facts about a country of your choice.</p>
+    <div class="clo-md-6 col-lg-6 mx-auto">
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label for="countryList"> Select Country</label>
+                <select id="countryList" name="countryList" class="form-control">
+                    <option value="" selected disabled hidden>Choose here</option>
+                </select>
+            </div>
+
+            <div class="strike">
+                <span>or</span>
+            </div>
+
+            <div class="form-group">
+                <label for="country"> Search for a Country</label>
+                <input type="text" id="searchCountry" name="searchCountry" placeholder="Enter a country" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+{{#each data}}
+    <div class="container"><p>Country: {{this.name}}</p>
+        <p>Flag: <img src="{{this.flag}}" alt="" width="50px" height="50px"></p>
+        <p>Native Name: {{this.nativeName}}</p>
+        <p>Official Currency: {{this.currencies.code}}</p>
+        <p>Borders are: {{this.borders}}</p>
+    </div>
+
+{{/each}}
