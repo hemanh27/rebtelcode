@@ -1,12 +1,12 @@
 {
-  "name": "vidjot",
+  "name": "rebtalcaode",
   "version": "1.0.0",
-  "description": "Video Ideas portal using Node.js, Express and Mongo DB.",
+  "description": "web application using Node.js, Express and Mongo DB.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Nitin Parasa",
+  "author": "Hemanth Kumar Gutam",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
